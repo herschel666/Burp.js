@@ -2,6 +2,8 @@
 
 Burp.js is a small `navigator.vibrate`-wrapper, that takes a rhythm represented by a string of asterisks, dashs and middots and translates this into vibrations. The duration of a single vibration can be defined in milliseconds by an optional second parameter.
 
+**[Visit the Demo](http://herschel666.github.com/Burp.js/)**
+
 ## Example ##
 
 
