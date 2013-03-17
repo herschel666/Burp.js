@@ -10,10 +10,15 @@
 	<link href="http://fonts.googleapis.com/css?family=Flavors" rel="stylesheet" type="text/css" />
 	<style type="text/css" rel="stylesheet">
 		h1 {
-			margin: 1em 0;
+			margin: 1em 0 .2em 0;
 			font: normal 3em 'Flavors', cursive;
 			text-align: center;
 			color: #333;
+			}
+		p {
+			color: #555;
+			text-align: center;
+			font-family: sans-serif;
 			}
 		button {
 			display: block;
@@ -62,7 +67,13 @@
 </head>
 <body>
 	
+<a href="https://github.com/herschel666/Burp.js">
+	<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+</a>
+	
 <h1>Burp.js-Demo</h1>
+
+<p>Wrapper for the Navigator.Vibrate-API</p>
 
 <button type="button" data-pattern="*·*-**-**" data-duration="300">Burp('*·*-**-**')</button>
 
@@ -70,7 +81,7 @@
 
 <button type="button" data-pattern="*·*·*·*--**--**" data-duration="150">Burp('*·*·*·*--**--**', 150)</button>
 
-<script src="../dist/burp.min.js"></script>
+<script src="js/burp.min.js"></script>
 <script>
 	(function (Burp) {
 		Array.prototype.slice.call(document.getElementsByTagName('button')).forEach(function (elem) {
