@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Burp.js-Demo</title>
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="cleartype" content="on" />
+	<link href="http://fonts.googleapis.com/css?family=Flavors" rel="stylesheet" type="text/css" />
+	<style type="text/css" rel="stylesheet">
+		h1 {
+			margin: 1em 0;
+			font: normal 3em 'Flavors', cursive;
+			text-align: center;
+			color: #333;
+			}
+		button {
+			display: block;
+			margin: 1.5em auto;
+			font-size: 1.5em;
+			padding: .6em 2.5em;
+			line-height: 32px;
+			-webkit-appearance: none;
+			border: 1px solid #FFF;
+			border-radius: 2em;
+			background: #223faa;
+			background: -moz-linear-gradient(top, #223faa 0%, #1a3184 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#223faa), color-stop(100%,#1a3184));
+			background: -webkit-linear-gradient(top, #223faa 0%,#1a3184 100%);
+			background: -o-linear-gradient(top, #223faa 0%,#1a3184 100%);
+			background: -ms-linear-gradient(top, #223faa 0%,#1a3184 100%);
+			background: linear-gradient(to bottom, #223faa 0%,#1a3184 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223faa', endColorstr='#1a3184',GradientType=0 );
+			-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+			-moz-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+			-ms-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+			-o-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+			box-shadow: 0 1px 0 rgba(0,0,0,.3);
+			opacity: .75;
+			-webkit-transition: all .3s ease-out;
+			-moz-transition: all .3s ease-out;
+			-ms-transition: all .3s ease-out;
+			-o-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+			color: #FFF;
+			text-shadow: 0 1px 1px rgba(0,0,0,.5);
+			cursor: pointer;
+			}
+
+		button:hover,
+		button:active,
+		button:focus {
+			opacity: 1;
+			-webkit-box-shadow: 0 0 1px rgba(0,0,0,.4), 0 2px 0 rgba(0,0,0,.3), 0 3px 1px rgba(0,0,0,.2);
+			-moz-box-shadow: 0 0 1px rgba(0,0,0,.4), 0 2px 0 rgba(0,0,0,.3), 0 3px 1px rgba(0,0,0,.2);
+			-ms-box-shadow: 0 0 1px rgba(0,0,0,.4), 0 2px 0 rgba(0,0,0,.3), 0 3px 1px rgba(0,0,0,.2);
+			-o-box-shadow: 0 0 1px rgba(0,0,0,.4), 0 2px 0 rgba(0,0,0,.3), 0 3px 1px rgba(0,0,0,.2);
+			box-shadow: 0 0 1px rgba(0,0,0,.4), 0 2px 0 rgba(0,0,0,.3), 0 3px 1px rgba(0,0,0,.2);
+		}
+	</style>
+</head>
+<body>
+	
+<h1>Burp.js-Demo</h1>
+
+<button type="button" data-pattern="*·*-**-**" data-duration="300">Burp('*·*-**-**')</button>
+
+<button type="button" data-pattern="**-*-*" data-duration="200">Burp('**-*-*', 200)</button>
+
+<button type="button" data-pattern="*·*·*·*--**--**" data-duration="150">Burp('*·*·*·*--**--**', 150)</button>
+
+<script src="../dist/burp.min.js"></script>
+<script>
+	(function (Burp) {
+		Array.prototype.slice.call(document.getElementsByTagName('button')).forEach(function (elem) {
+			elem.addEventListener('click', function () {
+				Burp(this.dataset.pattern, this.dataset.duration);
+			}, false);
+		});
+	})(Burp);
+</script>
+
+</body>
+</html>
