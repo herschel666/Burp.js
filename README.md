@@ -19,7 +19,7 @@ In the moment the Vibration-API is only supported by Firefox Mobile and Android.
 
 
 twitter: [Herschel_R](http://twitter.com/Herschel_R)<br>
-website: [www.emanuel-kluge.de](htp://www.emanuel-kluge.de/)
+website: [www.emanuel-kluge.de](http://www.emanuel-kluge.de/)
 
 
 ## License ##
